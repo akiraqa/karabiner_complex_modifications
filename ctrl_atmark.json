@@ -1,0 +1,37 @@
+{
+    "title": "Control @ for Obsidian Mac",
+    "rules": [
+        {
+            "description": "Control @ by Obsidian Mac",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "@",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "_",
+                            "modifiers": [
+                                "left_control"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^md\\.obsidian$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

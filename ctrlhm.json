@@ -1,0 +1,53 @@
+{
+    "title": "edit with Ctrl(h/m)",
+    "rules": [
+        {
+            "description": "edit with Ctrl(h/m)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^com\\.microsoft\\.VSCode$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "return_or_enter"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

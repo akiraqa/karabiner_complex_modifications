@@ -1,0 +1,97 @@
+{
+    "title": "BrowserControl by Ctrl(w/f/r)",
+    "rules": [
+        {
+            "description": "BrowserControl by Ctrl(w/f/r)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "w",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "w",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.brave\\.Browser$",
+                                "^com\\.microsoft\\.VSCode$",
+                                "^md\\.obsidian$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "f",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.brave\\.Browser$",
+                                "^md\\.obsidian$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "r",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "r",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.brave\\.Browser$",
+                                "^com\\.google\\.Chrome$"                            
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

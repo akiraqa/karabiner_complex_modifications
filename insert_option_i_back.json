@@ -1,0 +1,26 @@
+{
+    "title": "insert by Option+I",
+    "rules": [
+        {
+            "description": "insert by Option+I",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "i",
+                        "modifiers": {
+                            "mandatory": [
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "insert"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
