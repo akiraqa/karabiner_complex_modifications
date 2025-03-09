@@ -19,6 +19,15 @@
               "key_code": "spacebar",
               "modifiers": [
                   "left_command"
+                ],
+                "conditions": [
+                  {
+                    "type": "frontmost_application_unless",
+                    "bundle_identifiers": [
+                      "^com\\.brave\\.Browser$",
+                      "^com\\.google\\.Chrome$"
+                    ]
+                  }
                 ]
             }
           ]
