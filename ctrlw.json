@@ -1,10 +1,12 @@
 {
-    "title": "BrowserControl by Ctrl(w/f/r/t/←/→/19)",
+    "title": "BrowserControl by Ctrl(w/f/l/r/t/←/→/1/9/2/4)",
+    "docs":"https://karabiner-elements.pqrs.org/docs/json/",
     "rules": [
         {
-            "description": "BrowserControl by Ctrl(w/f/r/t/←/→/19)",
+            "description": "BrowserControl by Ctrl(w/f/l/r/t/←/→/1/9/2/4)",
             "manipulators": [
                 {
+                    "description": "ctrl+w  to close tab",
                     "type": "basic",
                     "from": {
                         "key_code": "w",
@@ -27,6 +29,7 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.google\\.Chrome$",
+                                "^com\\.apple\\.Safari$",
                                 "^com\\.brave\\.Browser$",
                                 "^com\\.microsoft\\.VSCode$",
                                 "^md\\.obsidian$"
@@ -35,6 +38,7 @@
                     ]
                 },
                 {
+                    "description": "ctrl+f  to find",
                     "type": "basic",
                     "from": {
                         "key_code": "f",
@@ -57,6 +61,7 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.google\\.Chrome$",
+                                "^com\\.apple\\.Safari$",
                                 "^com\\.brave\\.Browser$",
                                 "^md\\.obsidian$"
                             ]
@@ -64,6 +69,37 @@
                     ]
                 },
                 {
+                    "description": "ctrl+l  to go to address bar",
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "l",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
+                                "^com\\.google\\.Chrome$"                            
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "ctrl+r  to reload",
                     "type": "basic",
                     "from": {
                         "key_code": "r",
@@ -86,6 +122,7 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
                                 "^com\\.google\\.Chrome$"                            
                             ]
                         }
@@ -114,12 +151,14 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
                                 "^com\\.google\\.Chrome$"                            
                             ]
                         }
                     ]
                 },
                 {
+                    "description": "option + ← to back",
                     "type": "basic",
                     "from": {
                         "key_code": "left_arrow",
@@ -142,12 +181,14 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
                                 "^com\\.google\\.Chrome$"                            
                             ]
                         }
                     ]
                 },
                 {
+                    "description": "option + → to go ahead",
                     "type": "basic",
                     "from": {
                         "key_code": "right_arrow",
@@ -170,12 +211,14 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
                                 "^com\\.google\\.Chrome$"                            
                             ]
                         }
                     ]
                 },
                 {
+                    "description": "Ctrl+1 to switch most left tab",
                     "type": "basic",
                     "from": {
                         "key_code": "1",
@@ -198,12 +241,14 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
                                 "^com\\.google\\.Chrome$"                            
                             ]
                         }
                     ]
                 },
                 {
+                    "description": "Ctrl+9 to switch lastest tab",
                     "type": "basic",
                     "from": {
                         "key_code": "9",
@@ -226,6 +271,68 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
+                                "^com\\.google\\.Chrome$"                            
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Ctrl+2 to switch prev tab",
+                    "type": "basic",
+                    "from": {
+                        "key_code": "2",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "tab",
+                            "modifiers": [
+                                "left_shift",
+                                "left_control"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
+                                "^com\\.google\\.Chrome$"                            
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "Ctrl+4 to switch tab",
+                    "type": "basic",
+                    "from": {
+                        "key_code": "4",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "tab",
+                            "modifiers": [
+                                "left_control"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.brave\\.Browser$",
+                                "^com\\.apple\\.Safari$",
                                 "^com\\.google\\.Chrome$"                            
                             ]
                         }
