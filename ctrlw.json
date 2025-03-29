@@ -1,9 +1,9 @@
 {
-    "title": "BrowserControl by Ctrl(w/f/l/r/t/←/→/1/9/2/4)",
+    "title": "BrowserControl by Ctrl(w/f/l/r/t/←/→/1/9/4/5)",
     "docs":"https://karabiner-elements.pqrs.org/docs/json/",
     "rules": [
         {
-            "description": "BrowserControl by Ctrl(w/f/l/r/t/←/→/1/9/2/4)",
+            "description": "BrowserControl by Ctrl(w/f/l/r/t/←/→/1/9/4/5)",
             "manipulators": [
                 {
                     "description": "ctrl+w  to close tab",
@@ -278,10 +278,10 @@
                     ]
                 },
                 {
-                    "description": "Ctrl+2 to switch prev tab",
+                    "description": "Ctrl+4 to switch prev tab",
                     "type": "basic",
                     "from": {
-                        "key_code": "2",
+                        "key_code": "4",
                         "modifiers": {
                             "mandatory": [
                                 "control"
@@ -309,10 +309,10 @@
                     ]
                 },
                 {
-                    "description": "Ctrl+4 to switch tab",
+                    "description": "Ctrl+5 to switch tab",
                     "type": "basic",
                     "from": {
-                        "key_code": "4",
+                        "key_code": "5",
                         "modifiers": {
                             "mandatory": [
                                 "control"
